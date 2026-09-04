@@ -111,3 +111,33 @@ Durante o laboratório prático, foram analisados cenários operacionais de grup
 ### 4. Conclusão e Mitigação no Mundo Real
 Mapear alertas com base no MITRE ATT&CK eleva a maturidade de um SOC. Em vez de depender apenas de indicadores simples (como hashes de vírus conhecidos), a equipa de defesa passa a monitorizar o comportamento do atacante. Ferramentas como o **Ruler** ou táticas do **Mustang Panda** provam que a monitorização de processos filhos anómalos (ex: Outlook a iniciar o PowerShell) é crucial para mitigar invasões antes do impacto final.
 
+
+
+---
+
+## Projeto 4: Caso de Estudo Combinado - Deteção Avançada e Erradicação de Ameaças (Salas Summit & Eviction)
+
+### 1. Introdução e Objetivo
+Este projeto prático eleva os conceitos teóricos de frameworks para um cenário simulado de Resposta a Incidentes (IR) corporativos em tempo real. O objetivo foi atuar como Analista de SOC na contenção de um ataque interativo persistente conduzido por um ator de ameaças avançado (APT), aplicando engenharia de deteção para travar a infraestrutura do hacker e executar procedimentos de erradicação (*eviction*).
+
+---
+
+### 2. Metodologia de Deteção Comportamental (Fase Summit)
+Durante a fase de contenção, o adversário tentou contornar as defesas perimetrais tradicionais através de técnicas de rotação dinâmica de endereços IP (*Fast-Flux*). 
+
+A estratégia para neutralizar esta progressão baseou-se na transição de deteções estáticas para **deteções comportamentais baseadas no Sysmon**:
+* **Identificação do Beaconing:** Em vez de isolar um IP externo fixo, foi mapeada a assinatura mecânica imutável do malware (padrão de tráfego de Comando e Controlo contínuo com pacotes estritos de 97 bytes a cada 30 minutos / 1800 segundos).
+* **Uso da Variável Universal `%temp%`:** Para travar a persistência no Host sem depender de caminhos absolutos de utilizador, foi criada uma regra de monitorização na "bancada de trabalho" temporária do Windows, intercetando a criação e o despejo (*data staging*) de ficheiros de exfiltração ocultos (`exfiltr8.log`).
+
+---
+
+### 3. Procedimento de Erradicação e Pós-Incidente (Fase Eviction)
+Após a mitigação dos canais de C2, a investigação focou-se na destruição dos mecanismos de persistência internos remanescentes na rede corporativa, recorrendo ao mapeamento da matriz **MITRE ATT&CK**:
+* **Execução e Acesso Inicial:** Análise de vetores de engenharia social focados em *User Execution* através do cruzamento de *Malicious Links* e *Malicious Files*, identificando o abuso de interpretadores legítimos como o **PowerShell** e o **Windows Command Shell**.
+* **Proteção de Repositórios Críticos:** Identificação do repositório organizacional **SharePoint** como o alvo principal do APT para roubo de propriedade intelectual (*Data from Information Repositories - T1277*).
+* **Bloqueio de Exfiltração Oculta:** Mapeamento de tentativas de fuga de dados através de técnicas de evasão de rede, especificamente a implementação de regras rígidas contra estruturas de *External Proxies* e *Multi-hop Proxies* para cegar a comunicação reversa do atacante.
+
+---
+
+### 4. Conclusão Técnico-Operacional
+A resolução combinada deste cenário demonstra a importância da mentalidade *Assume Breach*. Um Analista de SOC eficaz não procura apenas bloquear indicadores triviais (como IPs e Hashes), mas sim compreender o *modus operandi* (TTPs) do adversário. A erradicação total só foi alcançada ao correlacionar as alterações internas no Host (Logs do Sysmon e modificações no Registo) com o comportamento anómalo do tráfego de saída (Egress), garantindo o despejo completo da ameaça sem interrupção dos serviços legítimos.
