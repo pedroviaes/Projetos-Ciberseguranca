@@ -24,7 +24,7 @@ A pirâmide está dividida em 6 camadas. Quanto mais alto subimos na pirâmide, 
 * **TTPs (Tough):** Táticas, Técnicas e Procedimentos. O comportamento/metodologia do atacante. Mudar as TTPs obriga o adversário a reaprender o seu próprio *modus operandi*.
 
 <br>
-<img src="piramide.jpg.jpg" alt="Estrutura da Pirâmide da Dor" width="500">
+<img src="piramide.jpg" alt="Estrutura da Pirâmide da Dor" width="500">
 <br>
 
 ---
@@ -38,13 +38,13 @@ A análise baseou-se nos seguintes critérios:
 3. Mapeamento dos planos gerais do adversário diretamente ao nível de TTPs (o topo da pirâmide).
 
 <br>
-<img src="cartoes.jpg.jpg" alt="Mapeamento de Indicadores Práticos" width="500">
+<img src="cartoes.jpg" alt="Mapeamento de Indicadores Práticos" width="500">
 <br>
 
 Após a correta distribuição de todos os vetores e prompts no simulador, o desafio foi concluído com sucesso, gerando a assinatura de validação técnica (*flag*) do laboratório.
 
 <br>
-<img src="flag.jpg.jpg" alt="Validação Final do Laboratório" width="500">
+<img src="flag.jpg" alt="Validação Final do Laboratório" width="500">
 <br>
 
 ---
