@@ -60,12 +60,11 @@ Alguns exemplos do raciocíonio:
 
 ---
 
-### 4. Conclusão e Mitigação no Mundo Real
-A conclusão deste laboratório reforça que uma defesa de SOC moderna não pode depender apenas de listas de IPs ou Hashes conhecidos (a base da pirâmide), pois são fáceis de contornar. 
+### 4. Conclusão
 
-Para criar resiliência a longo prazo, as equipas de Blue Team devem focar-se na criação de regras de deteção baseadas em **TTPs** e **Ferramentas** (recorrendo a frameworks como o MITRE ATT&CK), garantindo que, mesmo que o atacante mude de infraestrutura, o seu comportamento suspeito seja detetado e bloqueado imediatamente.
+Esta sala reforça que uma defesa de SOC moderna não pode depender apenas de listas de IPs ou hashes conhecidos (a base da pirâmide), pois são fáceis de contornar. 
 
-
+Para criar resiliência a longo prazo, as equipas de blue team devem apostar em detenções baseadas em **TTPs** e **ferramentas** a frameworks como MITRE ATT&CK. Assim, mesmo que o atacante mude de infraestrutura, o seu comportamento suspeito continua a ser detetável.
 
 ---
 
