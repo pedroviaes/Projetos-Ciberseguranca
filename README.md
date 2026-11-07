@@ -68,10 +68,12 @@ Para criar resiliência a longo prazo, as equipas de blue team devem apostar em 
 
 ---
 
-## Projeto 2: Mapeamento de Fases de Ataque com a Unified Kill Chain
+## Estudo guiado 2: Unified Kill Chain (TryHack Me)
 
 ### 1. Introdução e Objetivo
-Neste segundo projeto, o foco foi compreender a ordem cronológica e as metodologias estruturadas que os atacantes utilizam para comprometer sistemas corporativos. Utilizando a framework moderna **Unified Kill Chain**, analisei as táticas adversárias divididas de forma estratégica para além do perímetro defensivo tradicional.
+
+Sala do TryHack Me sobre a **Unified Kill Chain**, um modelo que descreve as fases de um ataque, desde o reconhecimento inicial até ao impacto final.
+Usei-a para perceber como as ações de um atacante se encadeiam e em que fase uma de deteção ou uma contenção pode travá-lo.
 
 O objetivo foi entender como mapear as ações de um atacante em cenários complexos de persistência e movimentação interna, aplicando os conceitos chave de Defesa Ativa.
 
