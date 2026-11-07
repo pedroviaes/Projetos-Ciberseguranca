@@ -8,9 +8,6 @@ Sou o Pedro Viães, de momento aluno de um CET Nivel 5 - Especialista em Ciberse
 - **Laboratório SOC com Wazuh e Sysmon:** em construção.
 - **Estudos guiados (TryHackMe):** salas que resolvi para consolidar conceitos de deteção e resposta a incidentes (abaixo).
 
-Este espaço é dedicado à documentação de laboratórios práticos e cenários reais resolvidos durante o meu percurso de especialização em Cibersegurança.
-
----
 
 ## Projeto 1: Análise e Classificação de Indicadores de Compromisso (IoCs) com a Pyramid of Pain
 
