@@ -101,12 +101,14 @@ Esta abordagem adota a mentalidade de **"Assumir a Invasão" (Assume Breach)**, 
 
 Na parte prática da sala, aparecia uma descrição de uma ação do atacante e eu tinha de escolher, entre várias opções, a fase da Unified Kill Chain a que correspondia.
 
-**O que retirei:** claro que se torna dificil decorar as 18 fases, mas, distinguir as que parecem semelhantes também se torna um quebra cabeças. Reconhecimento e descoberta, por exemplo, são ambas recolha de informação, mas a primeira acontece antes de o atacante entrar e a segunda já dentro da rede.
+**O que retirei:** claro que se torna dificil decorar as 18 fases, mas, distinguir as que parecem semelhantes também se torna um quebra-cabeças. Reconhecimento e descoberta, por exemplo, são ambas recolha de informação, mas a primeira acontece antes de o atacante entrar e a segunda já dentro da rede.
 
 ---
 
-### 4. Conclusão e Mitigação no Mundo Real
-A aplicação da Unified Kill Chain no dia a dia de um Analista de SOC permite estruturar a resposta a incidentes de forma granular. Se compreendermos que o atacante está na fase de "Movimentação Lateral", as regras de mitigação automatizadas (SOAR) podem isolar o segmento de rede afetado imediatamente, impedindo que o incidente progrida para a exfiltração ou destruição de dados.
+### 4. Conclusão 
+Conhecer a fase em que o atacante se encontra, ajuda um analista de SOC a estruturar a resposta. Se acabar por perceber que o atacante está mesmo numa fase de movimentação lateral, por exemplo, faz sentido priorizar a contenção do segmento de rede afetado antes que o incidente chegue à exfiltração ou à destruição de dados.
+
+Ferramentas de automação (SOAR) podem acelerar essa resposta, mas as decisões continuam a depender de análises humanas.
 
 ---
 ## Projeto 3: Engenharia de Deteção com MITRE ATT&CK e MITRE CAR
