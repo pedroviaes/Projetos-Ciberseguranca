@@ -111,17 +111,19 @@ Conhecer a fase em que o atacante se encontra, ajuda um analista de SOC a estrut
 Ferramentas de automação (SOAR) podem acelerar essa resposta, mas as decisões continuam a depender de análises humanas.
 
 ---
-## Projeto 3: Engenharia de Deteção com MITRE ATT&CK e MITRE CAR
+
+## Estudo guiado 3: MITRE (TryHackMe)
 
 ### 1. Introdução e Objetivo
-O objetivo deste projeto foi dominar a framework **MITRE ATT&CK** e o repositório **MITRE CAR (Cyber Analytics Repository)** para analisar o comportamento de grupos de ameaças persistentes avançadas (APTs) e traduzir esse conhecimento em regras de monitorização práticas para um ambiente de SOC.
+
+Sala do TryHackMe sobre os recursos da MITRE para a comunidade de cibersegurança: o **ATT&CK**, o **CAR** (Cyber Analytics Repository) e o **D3FEND**. Usei-a para perceber como o comportamento dos atacantes é catalogado em táticas e técnicas, e como esse catálogo serve de base para pensar em deteções e em defesas.
 
 ---
-
 
 ### 2. O Conceito Técnico
 * **MITRE ATT&CK:** Uma base de dados global que cataloga táticas (os objetivos do hacker) e técnicas (como ele executa esses objetivos) baseada em observações do mundo real.
 * **MITRE CAR:** Um repositório complementar que fornece lógicas de deteção e *queries* prontas (Splunk, EQL) baseadas no modelo ATT&CK, servindo como a "ficha técnica" para criar alertas de segurança.
+* **MITRE D3FEND:** Um catálogo de contramedidas defensivas, que funciona como o "lado defensivo" do ATT&CK.
 
 ---
 
