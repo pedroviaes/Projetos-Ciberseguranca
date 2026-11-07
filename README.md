@@ -64,7 +64,7 @@ Alguns exemplos do raciocíonio:
 
 Esta sala reforça que uma defesa de SOC moderna não pode depender apenas de listas de IPs ou hashes conhecidos (a base da pirâmide), pois são fáceis de contornar. 
 
-Para criar resiliência a longo prazo, as equipas de blue team devem apostar em detenções baseadas em **TTPs** e **ferramentas** a frameworks como MITRE ATT&CK. Assim, mesmo que o atacante mude de infraestrutura, o seu comportamento suspeito continua a ser detetável.
+Para criar resiliência a longo prazo, as equipas de blue team devem apostar em deteções baseadas em **TTPs** e **ferramentas**, recorrendo a frameworks como o MITRE ATT&CK. Assim, mesmo que o atacante mude de infraestrutura, o seu comportamento suspeito continua a ser detetável.
 
 ---
 
@@ -160,7 +160,6 @@ Sala-desafio do TryHackMe que aplica a **Pyramid of Pain** num exercício práti
 
 A sala tinha cinco amostras de malware (`sample1.exe` a `sample5.exe`) e uma fase final. Seguindo a ordem crescente da pirâmide, o objetivo era aumentar o custo do atacante a cada deteção, passando de indicadores fáceis de alterar, como hashes e IPs, para o comportamento, que é bem mais difícil de contornar.
 
-**O que retirei:** *(escreve aqui uma frase tua, por exemplo: o que te surpreendeu ao ver o atacante adaptar-se, ou o que percebeste sobre porque é que bloquear só IPs e hashes não chega)*
 
 ---
 
