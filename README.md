@@ -7,14 +7,14 @@ Sou o Pedro Viães, de momento aluno de um CET Nível 5 - Especialista em Cibers
 
 - **Laboratório SOC com Wazuh e Sysmon:** em construção.
 - **Estudos guiados (TryHackMe):** salas que resolvi para consolidar conceitos de deteção e resposta a incidentes (abaixo).
-
-
-## Projeto 1: Análise e Classificação de Indicadores de Compromisso (IoCs) com a Pyramid of Pain
+  
+## Estudo guiado 1: Pyramid of Pain (TryHackMe)
 
 ### 1. Introdução e Objetivo
-Como futuro Analista de SOC (Security Operations Center), compreender a eficácia das defesas de uma infraestrutura é fundamental. Este projeto demonstra a aplicação prática do conceito da **Pyramid of Pain (Pirâmide da Dor)**, focado em entender o impacto e a "dor" que causamos a um cibercriminoso ao bloquear diferentes tipos de Indicadores de Compromisso (IoCs).
 
-O objetivo principal foi analisar cenários práticos e categorizar os artefactos deixados por um atacante de acordo com o nível de dificuldade que ele enfrentará para contornar as nossas defesas.
+Sala do TryHackMe sobre a **Pyramid of Pain**, um modelo que classifica os indicadores de compromisso (IoCs) pela dificuldade que causa ao atacante quando são bloqueados. Usei-a para perceber porque é que as deteções baseadas em comportamento são mais robustas do que as baseadas em hashes ou IPs.
+
+O exercício consistiu em associar seis descrições de artefactos de um atacante ao nível correto da pirâmide.
 
 ---
 
