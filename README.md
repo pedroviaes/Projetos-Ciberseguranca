@@ -126,19 +126,25 @@ Sala do TryHackMe sobre os recursos da MITRE para a comunidade de ciberseguranç
 * **MITRE D3FEND:** Um catálogo de contramedidas defensivas, que funciona como o "lado defensivo" do ATT&CK.
 
 ---
+### 3. Resolução
 
-### 3. Resolução do Caso Prático
-Durante o laboratório prático, foram analisados cenários operacionais de grupos reais:
-1. **Mapeamento do Grupo APT33 (Elfin):** Investigação de como o grupo utiliza credenciais de e-mail comprometidas e manipula a ferramenta legítima **Ruler** para criar regras maliciosas ocultas no Microsoft Exchange, garantindo persistência persistente.
-2. **Análise do Grupo Mustang Panda (G0129):** Estudo técnico do arsenal do grupo, focado em campanhas de *Spear-phishing*, uso de ferramentas nativas do sistema (LOLBins como PowerShell e curl.exe) e execução do backdoor **PlugX** através de técnicas de *DLL Side-Loading*.
-3. **Desenvolvimento de Deteções (CAR-2020-09-001):** Análise de lógicas de deteção para monitorizar a criação e modificação de ficheiros no Agendador de Tarefas do Windows (`C:\Windows\Tasks`), visando mitigar ataques de persistência.
+A sala combinava leitura com perguntas e pequenos exercícios. Os pontos em que trabalhei mais foram:
+
+**Mapear um grupo no ATT&CK Navigator (Task 3).** O exemplo era o grupo **Mustang Panda (G0129)**, representado na matriz Enterprise do ATT&CK. As técnicas destacadas mostravam o comportamento do grupo: *phishing* para o acesso inicial, tarefas agendadas para a persistência, ficheiros ofuscados para a evasão de defesas e transferência de ferramentas para dentro da rede (*ingress tool transfer*) para o comando e controlo. Respondi também a perguntas sobre como ler uma página de técnica: a que tática pertence e qual é o seu ID.
+
+**Cenário de threat intelligence (Task 4).** O cenário punha-me como analista de segurança numa empresa do setor da aviação que estava a migrar para a cloud. A tarefa era usar a secção *Groups* do ATT&CK e o Navigator para identificar grupos que visam este setor, perceber as suas táticas e técnicas e avaliar lacunas na cobertura defensiva.
+
+**Análise de uma deteção do CAR (Task 5).** Estudei o CAR-2020-09-001 (*Scheduled Task - File Access*), que procura ficheiros criados nas pastas onde o Task Scheduler guarda as tarefas (`C:\Windows\Tasks` e `C:\Windows\System32\Tasks`) por processos que não sejam o `svchost.exe`. Está associado à técnica Scheduled Task/Job e às táticas de execução, persistência e escalada de privilégios, e traz exemplos em pseudocódigo e em Splunk com Sysmon.
+
+**D3FEND e outros projetos (Tasks 6 e 7).** O D3FEND organiza as contramedidas defensivas em sete táticas. A sala apresenta ainda o Adversary Emulation Library, o Caldera (emulação automatizada de adversários) e, de passagem, o AADAPT e o ATLAS.
 
 ---
 
-### 4. Conclusão e Mitigação no Mundo Real
-Mapear alertas com base no MITRE ATT&CK eleva a maturidade de um SOC. Em vez de depender apenas de indicadores simples (como hashes de vírus conhecidos), a equipa de defesa passa a monitorizar o comportamento do atacante. Ferramentas como o **Ruler** ou táticas do **Mustang Panda** provam que a monitorização de processos filhos anómalos (ex: Outlook a iniciar o PowerShell) é crucial para mitigar invasões antes do impacto final.
+### 4. Conclusão
 
+O ATT&CK dá à comunidade uma linguagem comum para descrever o comportamento dos atacantes, e o CAR e o D3FEND mostram o outro lado: como detetar e como defender.
 
+A sala tem um exemplo que liga as peças: o Mustang Panda mantém persistência com tarefas agendadas, e o CAR-2020-09-001 é uma deteção pensada precisamente para esse comportamento. É assim que um analista de SOC passa de um relatório de ameaça a algo que se pode procurar nos logs.
 
 ---
 
