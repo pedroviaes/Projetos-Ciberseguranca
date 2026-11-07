@@ -73,7 +73,7 @@ Para criar resiliência a longo prazo, as equipas de blue team devem apostar em 
 ### 1. Introdução e Objetivo
 
 Sala do TryHackMe sobre a **Unified Kill Chain**, um modelo que descreve as fases de um ataque, desde o reconhecimento inicial até ao impacto final.
-Usei-a para perceber como as ações de um atacante se encadeiam e em que fase uma de deteção ou uma contenção pode travá-lo.
+Usei-a para perceber como as ações de um atacante se encadeiam e em que fase uma deteção ou uma contenção pode travá-lo.
 
 ---
 
