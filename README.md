@@ -44,7 +44,7 @@ A pirâmide está dividida em 6 camadas. Quanto mais alto subimos na pirâmide, 
 
 Na sala, cada descrição do comportamento ou de um artefacto de um atacante tinha de ser associada ao nível correto da pirâmida. Em vez de decorar, usei a pergunta-guia do modelo: **quanto trabalho dá ao atacante mudar isto?**
 
-Alguns exemplos do raciocíonio:
+Alguns exemplos do raciocínio:
 
 - Um domínio comprado para uma campanha de *typo-squatting* é barato e fácil de substituir, por isso pertence aos níveis mais baixos.
 - Tráfego de comando e controlo (C2) com um padrão reconhecível é um artefacto de rede, que dá mais trabalho alterar do que um IP.
