@@ -81,16 +81,27 @@ O objetivo foi entender como mapear as ações de um atacante em cenários compl
 
 ### 2. O Conceito Técnico
 Ao contrário dos modelos lineares antigos, a **Unified Kill Chain** adapta-se aos ambientes modernos dividindo um ataque em **18 fases** agrupadas em 3 grandes blocos operacionais:
-* **In (Entrar):** Reconhecimento, desenvolvimento de recursos e obtenção do primeiro ponto de acesso.
-* **Through (Navegar):** Ações críticas dentro da rede, incluindo elevação de privilégios, evasão de defesas e movimentação lateral.
-* **Out (Executar):** A fase de impacto final (exfiltração de dados confidenciais ou execução de Ransomware).
+- **In (Entrar / Initial Foothold):** reconhecimento, preparação do ataque, entrega, engenharia social, exploração, persistência, evasão de defesas e comando e controlo (C2).
+- **Through (Navegar / Network Propagation):** pivotagem, descoberta, escalada de privilégios, execução, acesso a credenciais e movimentação lateral.
+- **Out (Executar / Action on Objectives):** recolha de dados, exfiltração, impacto e cumprimento dos objetivos.
 
 Esta abordagem adota a mentalidade de **"Assumir a Invasão" (Assume Breach)**, permitindo à equipa do SOC detetar o adversário mesmo que as defesas perimetrais falhem.
 
+<br>
+
+<img src="ukc-fases.png" alt="As 18 fases da Unified Kill Chain" width="600">
+
+<br>
+
+*Imagem: sala Unified Kill Chain, TryHackMe.*
+
 ---
 
-### 3. Resolução do Caso Prático
-A análise laboratorial envolveu a decomposição de um ataque cibernético simulado através do cruzamento de matrizes de inteligência. O exercício prático exigiu a identificação de logs associados a fases de exploração inicial, o rastreamento de ações de *pivoting* e a correta categorização do incidente em conformidade com o fluxo dinâmico da Unified Kill Chain.
+### 3. Resolução
+
+Na parte prática da sala, aparecia uma descrição de uma ação do atacante e eu tinha de escolher, entre várias opções, a fase da Unified Kill Chain a que correspondia.
+
+**O que retirei:** claro que se torna dificil decorar as 18 fases, mas, distinguir as que parecem semelhantes também se torna um quebra cabeças. Reconhecimento e descoberta, por exemplo, são ambas recolha de informação, mas a primeira acontece antes de o atacante entrar e a segunda já dentro da rede.
 
 ---
 
