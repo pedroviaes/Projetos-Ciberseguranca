@@ -89,7 +89,7 @@ Esta abordagem adota a mentalidade de **"Assumir a Invasão" (Assume Breach)**, 
 
 <br>
 
-<img src="ukc-fases.png" alt="Kill Chain" width="600">
+<img src="Kill Chain.png" alt="As 18 fases da Unified Kill Chain" width="600">
 
 <br>
 
