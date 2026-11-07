@@ -1,6 +1,14 @@
-# Portefólio de Cibersegurança - Projetos Autónomos
+# Portefólio de Cibersegurança 
 
-Bem-vindo ao meu portefólio. Este espaço é dedicado à documentação de laboratórios práticos e cenários reais resolvidos durante o meu percurso de especialização em Cibersegurança.
+Bem-vindo ao meu portefólio.
+Sou o Pedro Viães, de momento aluno de um CET Nivel 5 - Especialista em Cibersegurança, com o objetivo de trabalhar como analista SOC / blue team. 
+
+**Conteúdo**
+
+- **Laboratório SOC com Wazuh e Sysmon:** em construção.
+- **Estudos guiados (TryHackMe):** salas que resolvi para consolidar conceitos de deteção e resposta a incidentes (abaixo).
+
+Este espaço é dedicado à documentação de laboratórios práticos e cenários reais resolvidos durante o meu percurso de especialização em Cibersegurança.
 
 ---
 
