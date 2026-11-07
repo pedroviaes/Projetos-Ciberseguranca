@@ -148,29 +148,23 @@ A sala tem um exemplo que liga as peças: o Mustang Panda mantém persistência 
 
 ---
 
-## Projeto 4: Caso de Estudo Combinado - Deteção Avançada e Erradicação de Ameaças (Salas Summit & Eviction)
+## Estudo guiado 4: Summit (TryHackMe)
 
 ### 1. Introdução e Objetivo
-Este projeto prático eleva os conceitos teóricos de frameworks para um cenário simulado de Resposta a Incidentes (IR) corporativos em tempo real. O objetivo foi atuar como Analista de SOC na contenção de um ataque interativo persistente conduzido por um ator de ameaças avançado (APT), aplicando engenharia de deteção para travar a infraestrutura do hacker e executar procedimentos de erradicação (*eviction*).
+
+Sala-desafio do TryHackMe que aplica a **Pyramid of Pain** num exercício prático. O cenário é um exercício de *purple team*: um testador de intrusão externo tenta executar amostras de malware numa estação de trabalho simulada, e o meu papel era configurar as ferramentas de segurança para as detetar e impedir.
 
 ---
 
-### 2. Metodologia de Deteção Comportamental (Fase Summit)
-Durante a fase de contenção, o adversário tentou contornar as defesas perimetrais tradicionais através de técnicas de rotação dinâmica de endereços IP (*Fast-Flux*). 
+### 2. O desafio
 
-A estratégia para neutralizar esta progressão baseou-se na transição de deteções estáticas para **deteções comportamentais baseadas no Sysmon**:
-* **Identificação do Beaconing:** Em vez de isolar um IP externo fixo, foi mapeada a assinatura mecânica imutável do malware (padrão de tráfego de Comando e Controlo contínuo com pacotes estritos de 97 bytes a cada 30 minutos / 1800 segundos).
-* **Uso da Variável Universal `%temp%`:** Para travar a persistência no Host sem depender de caminhos absolutos de utilizador, foi criada uma regra de monitorização na "bancada de trabalho" temporária do Windows, intercetando a criação e o despejo (*data staging*) de ficheiros de exfiltração ocultos (`exfiltr8.log`).
+A sala tinha cinco amostras de malware (`sample1.exe` a `sample5.exe`) e uma fase final. Seguindo a ordem crescente da pirâmide, o objetivo era aumentar o custo do atacante a cada deteção, passando de indicadores fáceis de alterar, como hashes e IPs, para o comportamento, que é bem mais difícil de contornar.
 
----
-
-### 3. Procedimento de Erradicação e Pós-Incidente (Fase Eviction)
-Após a mitigação dos canais de C2, a investigação focou-se na destruição dos mecanismos de persistência internos remanescentes na rede corporativa, recorrendo ao mapeamento da matriz **MITRE ATT&CK**:
-* **Execução e Acesso Inicial:** Análise de vetores de engenharia social focados em *User Execution* através do cruzamento de *Malicious Links* e *Malicious Files*, identificando o abuso de interpretadores legítimos como o **PowerShell** e o **Windows Command Shell**.
-* **Proteção de Repositórios Críticos:** Identificação do repositório organizacional **SharePoint** como o alvo principal do APT para roubo de propriedade intelectual (*Data from Information Repositories - T1277*).
-* **Bloqueio de Exfiltração Oculta:** Mapeamento de tentativas de fuga de dados através de técnicas de evasão de rede, especificamente a implementação de regras rígidas contra estruturas de *External Proxies* e *Multi-hop Proxies* para cegar a comunicação reversa do atacante.
+**O que retirei:** *(escreve aqui uma frase tua, por exemplo: o que te surpreendeu ao ver o atacante adaptar-se, ou o que percebeste sobre porque é que bloquear só IPs e hashes não chega)*
 
 ---
 
-### 4. Conclusão Técnico-Operacional
-A resolução combinada deste cenário demonstra a importância da mentalidade *Assume Breach*. Um Analista de SOC eficaz não procura apenas bloquear indicadores triviais (como IPs e Hashes), mas sim compreender o *modus operandi* (TTPs) do adversário. A erradicação total só foi alcançada ao correlacionar as alterações internas no Host (Logs do Sysmon e modificações no Registo) com o comportamento anómalo do tráfego de saída (Egress), garantindo o despejo completo da ameaça sem interrupção dos serviços legítimos.
+### 3. Conclusão
+
+Esta sala mostra na prática o que o Estudo 1 explica em teoria: bloquear indicadores simples só atrasa o atacante, que os muda com pouco esforço. As deteções que mais pesam são as baseadas em comportamento, porque obrigam o adversário a mudar a forma de atuar.
+
