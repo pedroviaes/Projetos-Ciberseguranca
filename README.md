@@ -68,7 +68,7 @@ Para criar resiliência a longo prazo, as equipas de blue team devem apostar em 
 
 ---
 
-## Estudo guiado 2: Unified Kill Chain (TryHack Me)
+## Estudo guiado 2: Unified Kill Chain (TryHackMe)
 
 ### 1. Introdução e Objetivo
 
