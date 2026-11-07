@@ -29,28 +29,34 @@ A pirâmide está dividida em 6 camadas. Quanto mais alto subimos na pirâmide, 
 * **TTPs (Tough):** Táticas, Técnicas e Procedimentos. O comportamento/metodologia do atacante. Mudar as TTPs obriga o adversário a reaprender o seu próprio *modus operandi*.
 
 <br>
+
 <img src="piramide.jpg" alt="Estrutura da Pirâmide da Dor" width="500">
+
 <br>
+
+*Imagem: sala Pyramid of Pain, TryHackMe.*
+
+**Nota:** no laboratório Wazuh + Sysmon vou trabalhar sobretudo nos níveis **Tools** e **TTPs**, por exemplo a deteção de acesso à memória do LSASS (T1003.001), que é comportamento e não um hash ou um IP.
 
 ---
 
-### 3. Resolução do Caso Prático
-Utilizando o ambiente laboratorial simulado do TryHackMe, foi necessário analisar seis descrições de comportamentos e infraestruturas de um atacante para associá-las corretamente aos níveis correspondentes da pirâmide. 
+### 3. Resolução 
 
-A análise baseou-se nos seguintes critérios:
-1. Identificação de assinaturas e artefactos específicos de campanhas de *typo-squatting* (Domínios).
-2. Associação de tráfego de Comando e Controlo (C2) a artefactos de rede.
-3. Mapeamento dos planos gerais do adversário diretamente ao nível de TTPs (o topo da pirâmide).
+Na sala, cada descrição do comportamento ou de um artefacto de um atacante tinha de ser associada ao nível correto da pirâmida. Em vez de decorar, usei a pergunta-guia do modelo: **quanto trabalho dá ao atacante mudar isto?**
+
+Alguns exemplos do raciocíonio:
+
+- Um domínio comprado para uma campanha de *typo-squatting* é barato e fácil de substituir, por isso pertence aos níveis mais baixos.
+- Tráfego de comando e controlo (C2) com um padrão reconhecível é um artefacto de rede, que dá mais trabalho alterar do que um IP.
+- Os planos e objetivos do atacante correspondem ao topo (TTPs), porque mudá-los obriga-o a mudar a forma de atuar.
+  
+<br>
+
+<img src="cartoes.jpg" alt="Exercício de associação de indicadores aos níveis da Pyramid of Pain" width="500">
 
 <br>
-<img src="cartoes.jpg" alt="Mapeamento de Indicadores Práticos" width="500">
-<br>
 
-Após a correta distribuição de todos os vetores e prompts no simulador, o desafio foi concluído com sucesso, gerando a assinatura de validação técnica (*flag*) do laboratório.
-
-<br>
-<img src="flag.jpg" alt="Validação Final do Laboratório" width="500">
-<br>
+*Imagem: exercício da sala Pyramid of Pain, TryHackMe.*
 
 ---
 
