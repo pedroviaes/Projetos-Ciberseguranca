@@ -1,7 +1,7 @@
 # Portefólio de Cibersegurança 
 
 Bem-vindo ao meu portefólio.
-Sou o Pedro Viães, de momento aluno de um CET Nivel 5 - Especialista em Cibersegurança, com o objetivo de trabalhar como analista SOC / blue team. 
+Sou o Pedro Viães, de momento aluno de um CET Nível 5 - Especialista em Cibersegurança, com o objetivo de trabalhar como analista SOC / blue team. 
 
 **Conteúdo**
 
