@@ -24,7 +24,7 @@ A pirâmide está dividida em 6 camadas. Quanto mais alto subimos na pirâmide, 
 * **Hash Values (Trivial):** Assinaturas únicas de ficheiros (MD5, SHA-256). Mudar um único bit no ficheiro altera o hash.
 * **IP Addresses (Easy):** Endereços de rede. O atacante pode mudar de IP facilmente usando VPNs ou proxies.
 * **Domain Names (Simple):** Nomes de domínio (ex: `malicious-site.com`). Exige registo, mas continua a ser simples de alterar.
-* **Network/Host Artifacts (Annoying):** Rastros na rede (User-Agents) ou no sistema operativo (chaves de registo). Dá trabalho ao atacante modificar.
+* **Network/Host Artifacts (Annoying):** Rastos na rede (User-Agents) ou no sistema operativo (chaves de registo). Dá trabalho ao atacante modificar.
 * **Tools (Challenging):** Software usado para o ataque (ex: Mimikatz, Nmap). Obriga o atacante a reconfigurar ou programar ferramentas novas.
 * **TTPs (Tough):** Táticas, Técnicas e Procedimentos. O comportamento/metodologia do atacante. Mudar as TTPs obriga o adversário a reaprender o seu próprio *modus operandi*.
 
@@ -99,12 +99,12 @@ Esta abordagem adota a mentalidade de **"Assumir a Invasão" (Assume Breach)**, 
 
 Na parte prática da sala, aparecia uma descrição de uma ação do atacante e eu tinha de escolher, entre várias opções, a fase da Unified Kill Chain a que correspondia.
 
-**O que retirei:** claro que se torna dificil decorar as 18 fases, mas, distinguir as que parecem semelhantes também se torna um quebra-cabeças. Reconhecimento e descoberta, por exemplo, são ambas recolha de informação, mas a primeira acontece antes de o atacante entrar e a segunda já dentro da rede.
+**O que retirei:** claro que se torna difícil decorar as 18 fases, mas distinguir as que parecem semelhantes também se torna um quebra-cabeças. Reconhecimento e descoberta, por exemplo, são ambas recolha de informação, mas a primeira acontece antes de o atacante entrar e a segunda já dentro da rede.
 
 ---
 
 ### 4. Conclusão 
-Conhecer a fase em que o atacante se encontra, ajuda um analista de SOC a estruturar a resposta. Se acabar por perceber que o atacante está mesmo numa fase de movimentação lateral, por exemplo, faz sentido priorizar a contenção do segmento de rede afetado antes que o incidente chegue à exfiltração ou à destruição de dados.
+Conhecer a fase em que o atacante se encontra ajuda um analista de SOC a estruturar a resposta. Se acabar por perceber que o atacante está mesmo numa fase de movimentação lateral, por exemplo, faz sentido priorizar a contenção do segmento de rede afetado antes que o incidente chegue à exfiltração ou à destruição de dados.
 
 Ferramentas de automação (SOAR) podem acelerar essa resposta, mas as decisões continuam a depender de análises humanas.
 
@@ -128,7 +128,7 @@ Sala do TryHackMe sobre os recursos da MITRE para a comunidade de ciberseguranç
 
 A sala combinava leitura com perguntas e pequenos exercícios. Os pontos em que trabalhei mais foram:
 
-**Mapear um grupo no ATT&CK Navigator (Task 3).** O exemplo era o grupo **Mustang Panda (G0129)**, representado na matriz Enterprise do ATT&CK. As técnicas destacadas mostravam o comportamento do grupo: *phishing* para o acesso inicial, tarefas agendadas para a persistência, ficheiros ofuscados para a evasão de defesas e transferência de ferramentas para dentro da rede (*ingress tool transfer*) para o comando e controlo. Respondi também a perguntas sobre como ler uma página de técnica: a que tática pertence e qual é o seu ID.
+**Mapear um grupo no ATT&CK Navigator (Task 3).** O exemplo era o grupo **Mustang Panda (G0129)**, representado na matriz Enterprise do ATT&CK. As técnicas destacadas mostravam o comportamento do grupo: *phishing* para o acesso inicial, tarefas agendadas para a persistência, ficheiros ofuscados para a evasão de defesas e transferência de ferramentas para dentro da rede (*ingress tool transfer*) para o comando e controlo. Na sala respondi também a perguntas sobre como ler uma página de técnica no ATT&CK: a que tática pertence e qual é o seu ID.
 
 **Cenário de threat intelligence (Task 4).** O cenário punha-me como analista de segurança numa empresa do setor da aviação que estava a migrar para a cloud. A tarefa era usar a secção *Groups* do ATT&CK e o Navigator para identificar grupos que visam este setor, perceber as suas táticas e técnicas e avaliar lacunas na cobertura defensiva.
 
